@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "gptuesday"
+version = "0.1.0"
+description = ""
+authors = ["tad dy <a@a.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openai = "^0.27.8"
+numpy = "^1.25.0"
+
+[tool.poetry.scripts]
+main = "src:main.main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
