@@ -11,7 +11,7 @@ def main():
     ## Example 1
     # get the vector that represents the input in the text-embedding-ada-002 model by OpenAI
     response1 = openai.Embedding.create(
-        input="GPTuesday",
+        input="uzbekistan",
         model="text-embedding-ada-002"
     )
     
@@ -23,10 +23,10 @@ def main():
     with open('text_example_1.json', 'w') as f:
         json.dump(response1['data'], f)
 
-    ## Example 2
+    # Example 2
     # get the vector that represents the input in the text-embedding-ada-002 model by OpenAI
     response2 = openai.Embedding.create(
-        input="GPTWednesday",
+        input="tajikistan",
         model="text-embedding-ada-002"
     )
     
@@ -41,7 +41,7 @@ def main():
     ## Example 3
     # get the vector that represents the input in the text-embedding-ada-002 model by OpenAI
     response3 = openai.Embedding.create(
-        input="GPTFriday",
+        input="asdfasdf",
         model="text-embedding-ada-002"
     )
     
@@ -58,6 +58,6 @@ def main():
 
     print(similarity(vector_1, vector_2)) # GPTuesday & GPTWednesday should score highest
     print(similarity(vector_1, vector_3)) # GPTuesday & GPTFriday should score less
-    print(similarity(vector_2, vector_3)) # GPTWednesday & GPTFriday should score somewhere in the middle
+    # print(similarity(vector_2, vector_3)) # GPTWednesday & GPTFriday should score somewhere in the middle
 
     ## get dot product of example 1 and 3
